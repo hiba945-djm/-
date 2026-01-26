@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتزان | مبادرة وطنية للتعافي الرقمي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <h1>اتزان</h1>
+                <span class="slogan">نحو حياة رقمية واعية ومستقرة</span>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#features">المسارات</a></li>
+                    <li><a href="#support">المراكز</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>نحمي الأسرة.. <span class="highlight">ونبني القيم</span></h2>
+                <p>منصتك الأولى في الجزائر لتحقيق التوازن بين الحياة الرقمية والواقعية، وبناء جيل واعٍ ومستقل.</p>
+                <button class="btn btn-primary">ابدأ رحلة التعافي</button>
+            </div>
+            <div class="hero-visual">
+                <div class="circle-bg"></div>
+                <div class="icon-representation">⚖️</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>مسارات اتزان</h3>
+                <p>اختر المسار المناسب لك أو لأفراد أسرتك</p>
+            </div>
+
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-target="child-track">عالم الأطفال</button>
+                <button class="tab-btn" data-target="youth-track">جيل الشباب</button>
+                <button class="tab-btn" data-target="parent-track">دليل الأولياء</button>
+            </div>
+
+            <div class="tabs-content">
+                
+                <div id="child-track" class="tab-pane active">
+                    <div class="track-header">
+                        <h4>🌱 عالم الأطفال: قصص وقيم</h4>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <div class="card-icon">📖</div>
+                            <h5>قصص القدوة</h5>
+                            <p>حكايات تفاعلية تعزز الصدق والأمانة بعيداً عن الشاشات.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">🎨</div>
+                            <h5>أنشطة إبداعية</h5>
+                            <p>أوراق عمل للرسم والتلوين اليدوي لتنمية المهارات الحسية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="youth-track" class="tab-pane">
+                    <div class="track-header">
+                        <h4>🚀 جيل الشباب: وعي وإنجاز</h4>
+                    </div>
+                    
+                    <div class="split-layout">
+                        <div class="timer-box">
+                            <h5>⏱️ تحدي الصوم الرقمي</h5>
+                            <p>اضبط الوقت وركز في دراستك أو عبادتك</p>
+                            <div class="timer-display" id="timer-display">25:00</div>
+                            <div class="timer-controls">
+                                <button id="start-btn" class="btn btn-primary btn-small">ابدأ</button>
+                                <button id="pause-btn" class="btn btn-outline btn-small">إيقاف</button>
+                                <button id="reset-btn" class="btn btn-text btn-small">إعادة ضبط</button>
+                            </div>
+                            <p id="timer-status" class="status-text">جاهز للتحدي؟</p>
+                        </div>
+
+                        <div class="content-box">
+                            <h5>🧬 العلم والدين</h5>
+                            <ul class="check-list">
+                                <li>أثر الإدمان الرقمي على الدماغ.</li>
+                                <li>كيف حثنا الدين على حفظ الوقت والنفس.</li>
+                                <li>قصص ملهمة لشباب تركوا الإدمان.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="parent-track" class="tab-pane">
+                    <div class="track-header">
+                        <h4>🛡️ دليل الأولياء: حماية وتوجيه</h4>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h5>علامات الإدمان</h5>
+                            <p>كيف تكتشف أن طفلك يعاني من إفراط رقمي؟ قائمة مرجعية شاملة.</p>
+                        </div>
+                        <div class="card">
+                            <h5>أدوات الرقابة الأبوية</h5>
+                            <p>شروحات تقنية لكيفية حماية الأجهزة المنزلية.</p>
+                        </div>
+                        <div class="card">
+                            <h5>بدائل صحية</h5>
+                            <p>أفكار لقضاء وقت عائلي ممتع بعيداً عن الإنترنت.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="support-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>مراكز الاستقبال والتوجيه</h3>
+                <p>شبكة مراكزنا وشركائنا عبر التراب الوطني</p>
+            </div>
+            <div class="centers-grid">
+                <div class="center-card">
+                    <h4>المركز الوطني للأسرة</h4>
+                    <p class="location">📍 الجزائر العاصمة، حيدرة</p>
+                    <button class="btn btn-outline">حجز موعد</button>
+                </div>
+                <div class="center-card">
+                    <h4>عيادة "الأمل" للتأهيل</h4>
+                    <p class="location">📍 وهران، بئر الجير</p>
+                    <button class="btn btn-outline">حجز موعد</button>
+                </div>
+                <div class="center-card">
+                    <h4>فضاء "توازن" الشبابي</h4>
+                    <p class="location">📍 قسنطينة، المدينة الجديدة</p>
+                    <button class="btn btn-outline">حجز موعد</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة لمنصة اتزان © 2026</p>
+            <p class="small">مبادرة جزائرية لبناء مجتمع متوازن</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

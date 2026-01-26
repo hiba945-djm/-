@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #121212; 
+    color: #e0e0e0;  
+}
+
+
+#header {
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 28px; 
+    text-align: center; 
+}
+
+
+.article {
+    background-color: #1e1e1e; 
+    color: #ffeb3b; 
+    padding: 20px; 
+    margin: 15px 0; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+}
+*{
+  margin: 0% ;
+  padding: 0% ;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh ;
+  width:100% ;
+  background-color: black;
+}
+header{
+  width: 100% ;
+  margin: 20px 25px ;
+  display: flex ;
+  justify-content: space-between ;
+  align-items: center ;
+}
+nav ul{
+  display: flex ;
+  list-style: none ;
+  justify-content: space-around ;
+}
+il a{
+  margin: 20px 25px ;
+  text-decoration: none ;
+  text-transform: uppercase ;
+  font-weight: 600;
+  font-size: 18px ;
+  color: black ;
+}
+a:hover{
+  color: gold ;
+  border-button: 1px #000000 solid ;
+  podding-button: 4px ;
+}
+. right h1{
+  font-size: 35px ;
+  color: black ;
+  text-transform: uppercase ;
+  font-weight: 700 ;
+}
+.left button{
+  padding: 15px 30px ;
+  border: none ;
+  background-color: gold ;
+  color: white ;
+  border-radius: 15px ;
+  text-transform: uppercase ;
+  font-size: 15px ;
+}
+.left button:hover{
+  background-color: green ;
+  color: wheat ;
+}
+log in{
+  border: 1px solide black;
+  width: 400px;
+  height: 500px;
+  background: url('37f79681e57f0b51ffc3aed4d7e7e2ac');
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0,75);
+   border-radius: 0px 0px 20px rgba(0,0,0,0,75);
+  background-size: cover;
+  bckg
+}
+from{
+  display: block;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(40%);
+  flex-direction: column;
+  display: flex;
+  font-weight: normal;
+  font-size: 24px;
+  text-shadow: 0px 0px 20px rgba(0,0,0,0,5);
+  margin-bottom: 60px;
+}
+label{
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+input{
+  background: rgba(255,255,255,0.3);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 20px;
+  border: none;
+  margin-bottom: 20px;
+  color: white;
+}
+button{
+  background: rgba(45,126,231);
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+input{
+  background: rgb(255,255,255,0.3);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 20px;
+  border: none;
+  margin-b
+}
+button{
+  background: rgb(45,126,231);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  border:none;
+  margin: 10px 0px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0,75);
+}
