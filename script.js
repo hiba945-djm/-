@@ -1,85 +1,46 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     
-    // --- Tab System Logic ---
+    // 1. التعامل مع التبويبات (المتوسط، الثانوي، الجامعي)
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanes = document.querySelectorAll('.tab-pane');
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons and panes
+            // إزالة الكلاس active من جميع الأزرار والمحتوى
             tabBtns.forEach(b => b.classList.remove('active'));
             tabPanes.forEach(p => p.classList.remove('active'));
 
-            // Add active class to clicked button
+            // إضافة الكلاس active للزر الذي تم الضغط عليه
             btn.classList.add('active');
 
-            // Show target pane
+            // إظهار المحتوى المناسب بناءً على data-target
             const targetId = btn.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('active');
+            const targetPane = document.getElementById(targetId);
+            
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
         });
     });
 
-    // --- Digital Detox Timer Logic ---
-    let timerInterval;
-    let timeLeft = 25 * 60; // 25 minutes in seconds
-    let isRunning = false;
+    // 2. إضافة تأثير بسيط عند التمرير (Sticky Header Shadow)
+    const header = document.querySelector('.main-header');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
+        } else {
+            header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.05)";
+        }
+    });
 
-    const display = document.getElementById('timer-display');
-    const statusText = document.getElementById('timer-status');
-    const startBtn = document.getElementById('start-btn');
-    const pauseBtn = document.getElementById('pause-btn');
-    const resetBtn = document.getElementById('reset-btn');
-
-    function updateDisplay() {
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        // Add leading zero if less than 10
-        display.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    // 3. (اختياري) تحريك سلس عند الضغط على أزرار الهيرو
+    const startBtn = document.querySelector('.btn-primary.large');
+    if(startBtn) {
+        startBtn.addEventListener('click', () => {
+            document.getElementById('tracks').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
     }
-
-    function startTimer() {
-        if (isRunning) return;
-        
-        isRunning = true;
-        statusText.textContent = "ركز.. أنت أقوى من المشتتات";
-        // تغيير لون النص ليتوافق مع الثيم الفيروزي الجديد
-        statusText.style.color = "#00897b"; 
-        
-        timerInterval = setInterval(() => {
-            if (timeLeft > 0) {
-                timeLeft--;
-                updateDisplay();
-            } else {
-                clearInterval(timerInterval);
-                isRunning = false;
-                statusText.textContent = "أحسنت! أكملت جلسة التحدي بنجاح 🎉";
-                statusText.style.color = "#ff7043"; // اللون البرتقالي عند الإنجاز
-            }
-        }, 1000);
-    }
-
-    function pauseTimer() {
-        clearInterval(timerInterval);
-        isRunning = false;
-        statusText.textContent = "تم الإيقاف مؤقتاً";
-        statusText.style.color = "#636e72";
-    }
-
-    function resetTimer() {
-        clearInterval(timerInterval);
-        isRunning = false;
-        timeLeft = 25 * 60; // Reset to 25 mins
-        updateDisplay();
-        statusText.textContent = "جاهز للتحدي؟";
-        statusText.style.color = "#636e72";
-    }
-
-    // Event Listeners for Timer
-    startBtn.addEventListener('click', startTimer);
-    pauseBtn.addEventListener('click', pauseTimer);
-    resetBtn.addEventListener('click', resetTimer);
-
-    // Initialize display
-    updateDisplay();
-
-}};
+});
